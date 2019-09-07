@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path:`.env.${process.env.NODE_env}`,
+  path:`.env.${process.env.NODE_ENV}`,
 })
 
 
