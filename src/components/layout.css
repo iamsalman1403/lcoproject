@@ -1,4 +1,4 @@
-html {
+/* html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -619,4 +619,37 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+} */
+
+.bg-theme{
+  background-color: #1287a5;
+}
+.cart-arrow{
+  font-size: 3rem;
+}
+.hero-background{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-background{
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.demopic{
+  width: 180px;
+  height: 150px;
+}
+
+.card-size{
+  width: 400px;
+}
+.card-image{
+  width: 400px;
+  height: 240px;
 }

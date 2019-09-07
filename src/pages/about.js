@@ -6,21 +6,25 @@ import SEO from "../components/seo"
 import HeroSection from '../components/Reuseable/heroSection'
 import Infoblock from '../components/Reuseable/infoblock'
 import Dualinfoblock from '../components/Reuseable/Dualinfoblock'
-import Cart from '../components/Cart/Cart'
+import Team from '../components/About/team'
+// import Courses from '../components/Cart/Coursecart'
 
-const IndexPage = ({data}) => (
+
+const AboutPage = ({data}) => (
   <Layout>
     <SEO title="Home" />  
     < HeroSection img = {
       data.img.childImageSharp.fluid
     }
     title = 'salman'
-    subtitle = 'salmanparkar.xyz'
-    heroClass = 'hero-background' >
+    subtitle = ''
+    heroClass = 'about-background' >
     </HeroSection>
-    <Infoblock heading='About us'/>
-    <Dualinfoblock heading='Our team' btn='works'/>
-    <Cart courses={data.courses} />
+    <Dualinfoblock heading='Message from ceo' btn='works'/>
+    <Infoblock heading='About vision'/>
+    <Team/>
+  
+    
   </Layout>
 
 )
@@ -28,7 +32,7 @@ const IndexPage = ({data}) => (
 export const query = graphql`
 {
   img: file(relativePath: {
-    eq: "heromain.png"
+    eq: "about.png"
   }) {
     childImageSharp {
       fluid(maxWidth: 400, maxHeight: 250) {
@@ -36,27 +40,11 @@ export const query = graphql`
       }
     }
   }
-  courses: allContentfulCourses {
-    edges {
-      node {
-        id
-        title
-        price
-        caegory
-        description {
-          description
-        }
-        image {
-          fixed(width: 400, height: 240) {
-            src
-          }
-        }
-      }
-    }
-  }
+
+
 }
 `
 
-export default IndexPage
+export default AboutPage
 
-//img instread of filename in con
+//img instread of filename in const
